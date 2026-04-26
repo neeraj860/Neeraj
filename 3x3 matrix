@@ -1,0 +1,14 @@
+#!/bin/bash
+declare -a m1 m2 res
+echo "Enter 9 elements for Matrix 1:"
+for i in {0..8}; do read m1[$i]; done
+
+echo "Enter 9 elements for Matrix 2:"
+for i in {0..8}; do read m2[$i]; done
+
+echo "Resultant 3x3 Matrix:"
+for ((i=0; i<9; i++)); do
+    res[$i]=$((m1[i] + m2[i]))
+    printf "%d\t" "${res[$i]}"
+    if [ $(((i+1) % 3)) -eq 0 ]; then echo ""; fi
+done
