@@ -1,0 +1,10 @@
+#!/bin/bash
+read -p "Enter username: " username
+read -s -p "Enter password: " password
+echo
+
+# Create user and set password
+sudo useradd -m "$username"
+echo "$username:$password" | sudo chpasswd
+
+echo "User $username created successfully."
