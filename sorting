@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Enter numbers separated by space:"
+read -a arr
+
+# Ascending
+asc=$(echo "${arr[@]}" | tr ' ' '\n' | sort -n | tr '\n' ' ')
+# Descending
+desc=$(echo "${arr[@]}" | tr ' ' '\n' | sort -nr | tr '\n' ' ')
+
+echo "Ascending: $asc"
+echo "Descending: $desc"
