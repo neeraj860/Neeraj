@@ -1,0 +1,15 @@
+#!/bin/bash
+declare -a a b
+echo "Enter 4 elements for 2x2 Matrix A:"
+for i in {0..3}; do read a[$i]; done
+
+echo "Enter 4 elements for 2x2 Matrix B:"
+for i in {0..3}; do read b[$i]; done
+
+echo "Sum:"
+for i in {0..3}; do
+    sum=$((a[i] + b[i]))
+    printf "%d " "$sum"
+    if [ $i -eq 1 ]; then echo ""; fi
+done
+echo ""
