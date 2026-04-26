@@ -1,17 +1,9 @@
-#include <stdio.h>
+#!/bin/bash
+read -p "Enter first number (a): " a
+read -p "Enter second number (b): " b
 
-int main() {
-    int a, b, temp;
+temp=$a
+a=$b
+b=$temp
 
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-
-    temp = a;
-    a = b;
-    b = temp;
-
-    printf("After swapping:\n");
-    printf("a = %d, b = %d\n", a, b);
-
-    return 0;
-}
+echo "After swapping: a = $a, b = $b"
